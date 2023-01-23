@@ -1,0 +1,38 @@
+server:
+  port: 8083
+---
+#spring:
+#  config:
+#    activate:
+#      on-profile: qa
+spring:
+  config:
+    activate:
+      on-profile: qa
+---
+spring:
+  config:
+    profiles: dev
+  datasource:
+    username: postgres
+    url: jdbc:postgresql://${MYSQL_HOST:localhost}:5432/testdb
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+---
+spring:
+  config:
+    profiles: qa
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/testdb
+    password: Hansh@1914
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+
+

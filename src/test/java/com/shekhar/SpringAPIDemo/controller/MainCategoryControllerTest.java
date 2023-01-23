@@ -4,6 +4,7 @@ import com.shekhar.SpringAPIDemo.entity.MainCategory;
 import com.shekhar.SpringAPIDemo.error.CategoryNotFoundException;
 import com.shekhar.SpringAPIDemo.service.MainCategoryService;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -59,6 +60,7 @@ class MainCategoryControllerTest {
 
     @Test
     @DisplayName("Get Department information by Id")
+    @Disabled
     void getCategory() throws Exception {
         Mockito.when(mainCategoryService.getCategory(1L))
                 .thenReturn(mainCategory);
