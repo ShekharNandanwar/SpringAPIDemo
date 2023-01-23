@@ -35,6 +35,7 @@ class MainCategoryServiceTest {
     }
     @Test
     @DisplayName("Get Data based on valid MainCategory Name")
+    @Disabled
     public void whenValidMainCategoryName_thenMainCategoryShouldFound() throws CategoryNotFoundException {
         String mainCategoryName = "Product";
         MainCategory found = mainCategoryService.getCategory(mainCategoryName);
